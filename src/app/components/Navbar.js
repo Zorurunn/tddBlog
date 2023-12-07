@@ -1,6 +1,6 @@
 import { BlogSvg } from "../svg/BlogSvg";
 import { LogoSvg } from "../svg/LogoSvg";
-import { MetaSvg } from "../svg/MetaSvg";
+import { MetaSvg } from "../svg/MetaBlogSvg";
 import { UnionSvg } from "../svg/UnionSvg";
 import { MenuSvg } from "../svg/MenuSvg";
 
@@ -8,6 +8,17 @@ import { MenuSvg } from "../svg/MenuSvg";
 export const Navbar = (props) => {
     // const [clicked, setClicked] = useState(false);
     // const { darkMode, setDarkMode } = useMode();
+    const menu = [
+        {
+            title: 'Home'
+        },
+        {
+            title: 'Blog'
+        },
+        {
+            title: 'Contact'
+        },
+    ]
 
     return (
         <div>
@@ -17,10 +28,10 @@ export const Navbar = (props) => {
                 <div>
                     <LogoSvg />
                 </div>
-                <div className="flex gap-[10px]">
-                    <div>Home</div>
-                    <div>Blog</div>
-                    <div>Contact</div>
+                <div className="flex gap-[18px]">
+                    {menu.map((item) => {
+                        return <div>{item.title}</div>
+                    })}
                 </div>
                 <div>
                     Search

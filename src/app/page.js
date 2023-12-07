@@ -6,10 +6,23 @@ import { Hamburger } from './components/Hamburger'
 import { Navbar } from './components/Navbar'
 import { createContext, useContext, useEffect, useState } from 'react'
 import { Header } from './components/Header'
+import { Trending } from './components/Trending'
+import { AllBlog } from './components/AllBlog'
 
 
 const DataContext = createContext();
 
+const menu = [
+  {
+    title: 'Home'
+  },
+  {
+    title: 'Blog'
+  },
+  {
+    title: 'Contact'
+  },
+]
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
@@ -29,25 +42,32 @@ export default function Home() {
     getData();
   }, [])
   return (
-    <div>
-      <DataContext.Provider
-        value={
-          {
-            posts,
-            isLoading,
-          }
-        }
-      >
-        {/* {console.log(posts[0].url)} */}
-        {/* <img src={posts[0].cover_image} />/ */}
-        {/* {console.log(posts)} */}
-        <Container >
 
-          <Navbar />
-          <Header />
-        </Container>
-      </DataContext.Provider>
-    </div>
+    <DataContext.Provider
+      value={
+        {
+          posts,
+          isLoading,
+        }
+      }
+    >
+
+
+      <Container >
+        <Header />
+      </Container>
+
+      <Container >
+        <Trending />
+      </Container>
+
+      <Container >
+        <AllBlog />
+      </Container>
+
+
+    </DataContext.Provider>
+
   )
 }
 

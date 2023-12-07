@@ -1,6 +1,6 @@
 import { BlogSvg } from "../svg/BlogSvg";
 import { LogoSvg } from "../svg/LogoSvg";
-import { MetaSvg } from "../svg/MetaSvg";
+import { MetaSvg } from "../svg/MetaBlogSvg";
 import { UnionSvg } from "../svg/UnionSvg";
 import { MenuSvg } from "../svg/MenuSvg";
 
