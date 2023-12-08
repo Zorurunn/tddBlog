@@ -8,6 +8,8 @@ import { createContext, useContext, useEffect, useState } from 'react'
 import { Header } from './components/Header'
 import { Trending } from './components/Trending'
 import { AllBlog } from './components/AllBlog'
+// import { AllBlog } from '../Blog/page'
+import Link from 'next/link'
 
 
 const DataContext = createContext();
@@ -28,6 +30,8 @@ export default function Home() {
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  // setIsLoading(false);
+
   const getData = async () => {
     setIsLoading(true);
     const result = await fetch('https://dev.to/api/articles?username=johnrushx');
@@ -41,6 +45,8 @@ export default function Home() {
 
     getData();
   }, [])
+
+  const notShow = false;
   return (
 
     <DataContext.Provider
@@ -51,6 +57,11 @@ export default function Home() {
         }
       }
     >
+
+      {/* <Link href='/Blog' >feafrefre</Link> */}
+
+      {/* {notShow && <Navbar />} */}
+      {/* <Navbar /> */}
 
 
       <Container >
@@ -66,7 +77,7 @@ export default function Home() {
       </Container>
 
 
-    </DataContext.Provider>
+    </DataContext.Provider >
 
   )
 }

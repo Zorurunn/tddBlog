@@ -1,32 +1,40 @@
+import { useSearch } from "../layout";
+import { useBlogContext } from "./AllBlog";
 
 
 export const AllBlogNav = () => {
+    const { setTagValue } = useSearch();
     const data = [
         {
             title: 'All'
         },
         {
-            title: 'Blog'
+            title: 'JavaScript'
         },
         {
-            title: 'Design'
+            title: 'CSS'
         },
         {
             title: 'Technology'
         },
         {
-            title: 'Work'
+            title: 'Discuss'
         },
         {
-            title: 'Domain'
+            title: 'Gaming'
         },
     ]
+    const clicked = (event) => {
+        const viewTagValue = (event.target.innerHTML).toLowerCase();
+        viewTagValue === 'all' ? setTagValue(' ') : setTagValue(viewTagValue)
+
+    }
     return (
 
         <div className="flex justify-between items-center">
             <div className="flex gap-[10px] ">
                 {data.map((item) => {
-                    return <div className="hover:text-[green] cursor-pointer">{item.title}</div>
+                    return <div onClick={clicked} className="hover:text-[green] cursor-pointer">{item.title}</div>
                 })}
             </div>
 

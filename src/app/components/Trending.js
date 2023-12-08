@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { GroupArticle } from "./GroupArticle"
 import { TrendingCard } from "./TrendingCard";
+import { useSearch } from "../layout";
 
 
-export const Trending = (props) => {
+export const Trending = () => {
+    const { searchValue } = useSearch();
     const [posts, setPosts] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -28,9 +30,13 @@ export const Trending = (props) => {
                 (
                     <div className="w-full ">
                         <div className="w-full grid grid-cols-4 gap-[20px]">
-                            {posts.map((item, index) => {
-                                return <TrendingCard key={index} {...item} />
-                            })}
+                            {posts
+                                .filter((item) => {
+                                    return item.title.toLowerCase().includes(searchValue.toLowerCase())
+                                })
+                                .map((item, index) => {
+                                    return <TrendingCard key={index} {...item} />
+                                })}
                         </div>
                     </div>
                 )

@@ -53,11 +53,14 @@ export const Footer = () => {
                     <LinkedInSvg />
                 </div>
             </div>
-            <div className="flex justify-between">
-                <div>
+            <hr className="w-full"></hr>
+            <div className="flex justify-between w-full">
+                <div className='flex'>
                     <UnionSvg />
-                    <MetaBlogSvg />
-                    <div>© All Rights Reserved.</div>
+                    <div>
+                        <MetaBlogSvg />
+                        <div>© All Rights Reserved.</div>
+                    </div>
                 </div>
                 <div className="flex gap-[20px] justify-center items-center">
                     {footerMenu.map((item) => {
