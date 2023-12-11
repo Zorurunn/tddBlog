@@ -57,6 +57,7 @@ export const AllBlog = () => {
                                         return item.title.toLowerCase().includes(searchValue.toLowerCase())
                                     })
                                     .map((item, index) => {
+                                        console.log(item);
                                         return <AllBlogCard key={index} {...item} />
                                     })}
                             </div>

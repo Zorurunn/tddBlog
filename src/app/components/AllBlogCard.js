@@ -3,11 +3,11 @@ import { useBlogContext } from "./AllBlog"
 import { useSearch } from "../layout";
 
 
-export const AllBlogCard = ({ cover_image, tag_list, title, published_at }) => {
+export const AllBlogCard = ({ cover_image, tag_list, title, published_at, id }) => {
     const { tagValue } = useSearch();
 
     return (
-        <Link href={'/SinglePage'} {...title} >
+        <Link href={`/${id}`}  >
             <div className="flex flex-col w-full h-full  gap-[30px] border-[2px] rounded-[5px] p-[10px]">
                 <div className=" grow ">
                     <div className="relative w-full pt-[67%]">
@@ -27,6 +27,7 @@ export const AllBlogCard = ({ cover_image, tag_list, title, published_at }) => {
                 </div>
 
             </div>
+            {/* <Link href={''}></Link> */}
         </Link >
     )
 }

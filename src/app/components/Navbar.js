@@ -41,9 +41,8 @@ export const Navbar = (props) => {
     }
     return (
         <div>
-            <nav
-                className="w-full flex justify-between items-center pt-[20px] pb-[20px]"
-            >
+            <nav className="w-full flex justify-between items-center pt-[20px] pb-[20px] invisible">
+
                 <div>
                     <LogoSvg />
                 </div>
@@ -61,8 +60,61 @@ export const Navbar = (props) => {
                     />
                     <button onClick={searchClick}>Search</button>
                 </div>
-            </nav>
-        </div>
 
+
+            </nav>
+
+            <div className="fixed top-0 left-0 w-screen bg-gray-50 z-[30] ">
+                <div className=" w-screen m-auto max-w-[1100px] px-[16px] z-[30]">
+
+                    <nav className="w-full flex justify-between items-center pt-[20px] pb-[20px] z-[30]">
+
+                        <div>
+                            <LogoSvg />
+                        </div>
+                        <div className="flex gap-[18px]">
+                            {menu.map((item) => {
+                                return <Link href={item.href}>{item.title}</Link>
+                            })}
+                        </div>
+                        <div>
+                            <input
+                                className="border-[2px] rounded"
+                                ref={searchRef}
+                                type={'text'}
+                                onChange={searching}
+                            />
+                            <button onClick={searchClick}>Search</button>
+                        </div>
+
+
+                    </nav>
+
+                </div>
+            </div>
+
+
+
+        </div>
     )
 }
+
+{/* <nav className="w-full flex justify-between items-center pt-[20px] pb-[20px]">
+<div>
+    <LogoSvg />
+</div>
+<div className="flex gap-[18px]">
+    {menu.map((item) => {
+        return <Link href={item.href}>{item.title}</Link>
+    })}
+</div>
+<div>
+    <input
+        className="border-[2px] rounded"
+        ref={searchRef}
+        type={'text'}
+        onChange={searching}
+    />
+    <button onClick={searchClick}>Search</button>
+</div>
+</nav> */}
