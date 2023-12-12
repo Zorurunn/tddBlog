@@ -42,8 +42,12 @@ export const Navbar = (props) => {
           <LogoSvg />
         </div>
         <div className="flex gap-[18px]">
-          {menu.map((item) => {
-            return <Link href={item.href}>{item.title}</Link>;
+          {menu.map((item, index) => {
+            return (
+              <Link key={index} href={item.href}>
+                {item.title}
+              </Link>
+            );
           })}
         </div>
         <div>
@@ -65,8 +69,12 @@ export const Navbar = (props) => {
               <LogoSvg />
             </div>
             <div className="flex gap-[18px]">
-              {menu.map((item) => {
-                return <Link href={item.href}>{item.title}</Link>;
+              {menu.map((item, index) => {
+                return (
+                  <Link key={index} href={item.href}>
+                    {item.title}
+                  </Link>
+                );
               })}
               {/* <Link href={"../app/blog"} /> */}
             </div>
