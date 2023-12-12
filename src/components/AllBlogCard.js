@@ -1,9 +1,9 @@
 import Link from "next/link"
 import { useBlogContext } from "./AllBlog"
-import { useSearch } from "../layout";
+import { useSearch } from "../app/layout";
 
 
-export const AllBlogCard = ({ cover_image, tag_list, title, published_at, id }) => {
+export const AllBlogCard = ({ cover_image, tag_list, title, published_at, id, social_image }) => {
     const { tagValue } = useSearch();
 
     return (
@@ -12,7 +12,7 @@ export const AllBlogCard = ({ cover_image, tag_list, title, published_at, id }) 
                 <div className=" grow ">
                     <div className="relative w-full pt-[67%]">
                         <div className="absolute w-full h-full top-0 left-0 rounded-[5px] overflow-hidden ">
-                            <img className="relative top-0 left-0 w-full h-full object-cover" src={cover_image ? cover_image : '/nrl.jpg'} />
+                            <img className="relative top-0 left-0 w-full h-full object-cover" src={cover_image ? cover_image : social_image} />
                             <div className="absolute top-0 left-0 w-full h-full object-cover bg-black opacity-30 z-10" ></div>
 
                         </div>

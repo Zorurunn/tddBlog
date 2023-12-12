@@ -4,8 +4,8 @@ import { TrendingCard } from "./TrendingCard";
 import { AllBlogCard } from "./AllBlogCard";
 import { LoadMoreButton } from "./LoadMoreButton";
 import { AllBlogNav } from "./AllBlogNav";
-import { useData } from "../page";
-import { useSearch } from "../layout";
+import { useData } from "../app/page";
+import { useSearch } from "../app/layout";
 
 // const BlogContext = createContext();
 

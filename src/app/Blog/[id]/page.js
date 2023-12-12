@@ -1,7 +1,7 @@
 'use client'
 import { useParams } from "next/navigation"
 import { useEffect, useState } from "react";
-import { Container } from "../components/Container";
+import { Container } from "../../../components/Container";
 
 
 export default function Pages() {

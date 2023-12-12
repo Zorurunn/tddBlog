@@ -1,10 +1,10 @@
 'use client'
 import { useEffect, useState } from "react";
-import { Container } from "../components/Container";
-import { GroupArticle } from "../components/GroupArticle";
-import { LoadMoreButton } from "../components/LoadMoreButton";
-import { AllBlogCard } from "../components/AllBlogCard";
-import { useBlogContext } from "../components/AllBlog";
+import { Container } from "../../components/Container";
+import { GroupArticle } from "../../components/GroupArticle";
+import { LoadMoreButton } from "../../components/LoadMoreButton";
+import { AllBlogCard } from "../../components/AllBlogCard";
+import { useBlogContext } from "../../components/AllBlog";
 import { useSearch } from "../layout";
 
 

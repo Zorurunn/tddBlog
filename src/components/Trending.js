@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { GroupArticle } from "./GroupArticle"
 import { TrendingCard } from "./TrendingCard";
-import { useSearch } from "../layout";
+import { useSearch } from "../app/layout";
 
 
 export const Trending = () => {
