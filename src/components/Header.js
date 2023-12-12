@@ -71,7 +71,7 @@ export const Header = (props) => {
             // style={{ transform: `translateX(-12.5%)` }}
           >
             <div key={"lastNone"} className="grow">
-              <Link href={`${posts[posts.length - 1].id}`}>
+              <Link href={`/blog${posts[posts.length - 1].id}`}>
                 <div className="relative w-full pt-[56.25%]">
                   <div className="absolute w-full h-full top-0 left-0 rounded-[20px] overflow-hidden ">
                     <img
@@ -101,7 +101,7 @@ export const Header = (props) => {
             {posts.map((item, index) => {
               return (
                 <div key={index} className="grow">
-                  <Link href={`${item.id}`}>
+                  <Link href={`/blog/${item.id}`}>
                     <div className="relative w-full pt-[56.25%]">
                       <div className="absolute w-full h-full top-0 left-0 rounded-[20px] overflow-hidden ">
                         <img
@@ -129,7 +129,7 @@ export const Header = (props) => {
               );
             })}
             <div key={"firstNone"} className="grow">
-              <Link href={`${posts[0].id}`}>
+              <Link href={`/blog/${posts[0].id}`}>
                 <div className="relative w-full pt-[56.25%]">
                   <div className="absolute w-full h-full top-0 left-0 rounded-[20px] overflow-hidden ">
                     <img
