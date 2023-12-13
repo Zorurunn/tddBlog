@@ -86,7 +86,7 @@ export const Navbar = (props) => {
                 onChange={searching}
                 key={"searching"}
               />
-              <button onClick={searchClick}>SearchZoloo</button>
+              <button onClick={searchClick}>Edited</button>
             </div>
           </nav>
         </div>
