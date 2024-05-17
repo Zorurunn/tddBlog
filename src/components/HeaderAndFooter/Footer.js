@@ -1,11 +1,11 @@
-import { InstaSvg } from "../svg/InstaSvg";
-import { FbSvg } from "../svg/FbSvg";
-import { XSvg } from "../svg/XSvg";
-import { LinkedInSvg } from "../svg/LinkedInSvg";
-import { MetaBlogSvg, MetaSvg } from "../svg/MetaBlogSvg";
-import { LogoSvg } from "../svg/LogoSvg";
-import { BlogSvg } from "../svg/BlogSvg";
-import { UnionSvg } from "../svg/UnionSvg";
+import { InstaSvg } from "../../svg/InstaSvg";
+import { FbSvg } from "../../svg/FbSvg";
+import { XSvg } from "../../svg/XSvg";
+import { LinkedInSvg } from "../../svg/LinkedInSvg";
+import { MetaBlogSvg, MetaSvg } from "../../svg/MetaBlogSvg";
+import { LogoSvg } from "../../svg/LogoSvg";
+import { BlogSvg } from "../../svg/BlogSvg";
+import { UnionSvg } from "../../svg/UnionSvg";
 
 const menu = [
   {

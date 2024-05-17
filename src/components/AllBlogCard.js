@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useBlogContext } from "./AllBlog";
-import { useSearch } from "../app/layout";
+import { useSearch } from "./providers/SearchDataProvider";
 
 export const AllBlogCard = ({
   cover_image,

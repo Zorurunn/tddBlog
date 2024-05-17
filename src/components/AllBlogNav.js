@@ -1,5 +1,5 @@
-import { useSearch } from "../app/layout";
 import { useBlogContext } from "./AllBlog";
+import { useSearch } from "./providers/SearchDataProvider";
 
 export const AllBlogNav = () => {
   const { setTagValue } = useSearch();

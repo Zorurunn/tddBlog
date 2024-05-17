@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import { useData } from "../app/page";
+import { useData } from "../../app/page";
 import { BackSvg } from "@/svg/BackSvg";
-import { ForwardSvg } from "../svg/ForwardSvg";
-import styles from "../app/page.module.css";
+import { ForwardSvg } from "../../svg/ForwardSvg";
 import Link from "next/link";
 
 export const Header = (props) => {
@@ -17,7 +16,6 @@ export const Header = (props) => {
     const result = await fetch(`https://dev.to/api/articles?page=1&per_page=6`);
     const data = await result.json();
     setPosts(data);
-    console.log(data);
     setIsLoading(false);
   };
   useEffect(() => {
